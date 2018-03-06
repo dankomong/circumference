@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  #maincontent {
+    text-align: center;
+    font-family: "Calibri";
+  }
+  </style>
+  <script>
+    function circumference(ft) {
+      var circ = 131480000.00;
+      var radius = circ/3.14;
+      var newCirc = 2.00 * 3.14 * (radius + ft);
+      var myContent;
+      myContent = document.getElementById("circContent");
+      myContent.innerHTML = "This is the new circumference: " + newCirc + ". " +
+      "The Earth gained about " + (newCirc - circ) + " units in circumference.";
+    }
+  </script>
+</head>
+<body>
+  <div id = "maincontent">
+    <h1 id = "circContent">Click <a href = "#" onclick="circumference(1.00);">here</a> to find out how
+      long the rope is surrounding the Earth when it is now 1 foot above the equator.
+      (assuming that the Earth is perfectly spherical and its circumference is 131,480,000) </h1>
+  </div>
+</body>
+</script>
+</html>
